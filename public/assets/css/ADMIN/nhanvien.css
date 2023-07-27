@@ -1,0 +1,61 @@
+th:nth-child(1) {
+    width: 30px;
+}
+th:nth-child(3) {
+    width: 90px;
+}
+th:nth-child(5) {
+    width: 59px;
+}
+td{
+    text-align:center ;
+}
+
+.edit-button, .delete-button {
+	border: none;
+	color: white;
+	padding: 5px 10px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 14px;
+	margin: 2px 1px;
+	border-radius: 12px;
+	cursor: pointer;
+}
+
+.edit-button {
+	background-color: #4CAF50; /* Green */
+}
+
+.delete-button {
+	background-color: #f44336; /* Red */
+}
+.edit-button:hover {
+	background-color: white;
+	color: #4CAF50;
+}
+.delete-button:hover {
+	background-color: white;
+	color: #f44336;
+}
+.add-button {
+	border: none;
+	color: white;
+    border-radius: 12px;
+	padding: 5px 10px;
+	text-align: center;
+	text-decoration: none;
+	display: block;
+	font-size: 14px;
+	margin: 2px 1px;
+	margin-bottom: 20px;
+	margin-top: 0px;
+	cursor: pointer;
+	background-color: #008CBA; /* Blue */
+	transition-duration: 0.4s;
+}
+
+.add-button:hover {
+	background-color: #006699; /* Darker blue */
+}
