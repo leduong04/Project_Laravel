@@ -13,7 +13,7 @@
 <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/ADMIN/admin.css')}}">
 <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/ADMIN/sidebar.css')}}">
 <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/ADMIN/navbar.css')}}">
-<link rel="stylesheet" type="text/css" href="{{ asset('assets/css/ADMIN/orders.css')}}">
+<!-- <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/ADMIN/orders.css')}}"> -->
 <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/ADMIN/nhanvien.css')}}">
 
 
@@ -53,15 +53,13 @@
 							<tr>
 								<th>id</th>
 								<th>Tên</th>
-                                <th>Ngày sinh</th>
 								<th>Email</th>
 								<th>Giới tính</th>
-								<!-- <th>Địa chỉ</th> -->
                                 <th>SĐT</th>
                                 <th>Ảnh</th>
                                 <th>Level</th>
                                 <th>Chức vụ</th>
-								<th>sửa/xóa</th>
+								<th>Hành động</th>
 							</tr>
 						</thead>
 						<tbody>
@@ -70,10 +68,8 @@
 									<p>1</p>
 								</td>
 								<td><p>Le Doan Duong</p></td>
-                                <td><p>01-10-2021</p></td>
                                 <td><p>name@example.com</p></td>
                                 <td>Nam</td>
-                                <!-- <td>745 Hồng Hà Hoàn Kiếm Hà Nội</td> -->
                                 <td>0926573474</td>
                                 <td>
 									<img src="img/1.jpg">
@@ -82,22 +78,23 @@
 								<td>Trưởng bộ phận</td>
 								<td>
 									<button class="edit-button">
-									 <i class="fa-solid fa-pen-to-square"></i>Sửa
+									   <i class="fa-solid fa-pen-to-square"></i>
+									</button>
+									<button class="detail-button">
+									    <i class="fa-solid fa-info"></i>
 									</button>
 									<button class="delete-button">
-										<i class="fa-solid fa-trash"></i>Xóa
+										<i class="fa-solid fa-trash"></i>
 									</button>
 								</td>
 							</tr>
 							<tr>
 								<td>
-									<p>1</p>
+									<p>1235</p>
 								</td>
 								<td><p>Le Doan Duong</p></td>
-                                <td><p>01-10-2021</p></td>
                                 <td><p>name@example.com</p></td>
                                 <td>Nam</td>
-                                <!-- <td>745 Hồng Hà Hoàn Kiếm Hà Nội</td> -->
                                 <td>0926573474</td>
                                 <td>
 									<img src="img/1.jpg">
@@ -106,254 +103,17 @@
 								<td>Trưởng bộ phận</td>
 								<td>
 									<button class="edit-button">
-									 <i class="fa-solid fa-pen-to-square"></i>Sửa
+									 <i class="fa-solid fa-pen-to-square"></i>
+									</button>
+									<button class="detail-button">
+									    <i class="fa-solid fa-info"></i>
 									</button>
 									<button class="delete-button">
-										<i class="fa-solid fa-trash"></i>Xóa
+										<i class="fa-solid fa-trash"></i>
 									</button>
 								</td>
 							</tr>
-							<tr>
-								<td>
-									<p>1</p>
-								</td>
-								<td><p>Le Doan Duong</p></td>
-                                <td><p>01-10-2021</p></td>
-                                <td><p>name@example.com</p></td>
-                                <td>Nam</td>
-                                <!-- <td>745 Hồng Hà Hoàn Kiếm Hà Nội</td> -->
-                                <td>0926573474</td>
-                                <td>
-									<img src="img/1.jpg">
-								</td>
-								<td>1</td>
-								<td>Trưởng bộ phận</td>
-								<td>
-									<button class="edit-button">
-									 <i class="fa-solid fa-pen-to-square"></i>Sửa
-									</button>
-									<button class="delete-button">
-										<i class="fa-solid fa-trash"></i>Xóa
-									</button>
-								</td>
-							</tr>
-							<tr>
-								<td>
-									<p>1</p>
-								</td>
-								<td><p>Le Doan Duong</p></td>
-                                <td><p>01-10-2021</p></td>
-                                <td><p>name@example.com</p></td>
-                                <td>Nam</td>
-                                <!-- <td>745 Hồng Hà Hoàn Kiếm Hà Nội</td> -->
-                                <td>0926573474</td>
-                                <td>
-									<img src="img/1.jpg">
-								</td>
-								<td>1</td>
-								<td>Trưởng bộ phận</td>
-								<td>
-									<button class="edit-button">
-									 <i class="fa-solid fa-pen-to-square"></i>Sửa
-									</button>
-									<button class="delete-button">
-										<i class="fa-solid fa-trash"></i>Xóa
-									</button>
-								</td>
-							</tr>
-							<tr>
-								<td>
-									<p>1</p>
-								</td>
-								<td><p>Le Doan Duong</p></td>
-                                <td><p>01-10-2021</p></td>
-                                <td><p>name@example.com</p></td>
-                                <td>Nam</td>
-                                <!-- <td>745 Hồng Hà Hoàn Kiếm Hà Nội</td> -->
-                                <td>0926573474</td>
-                                <td>
-									<img src="img/1.jpg">
-								</td>
-								<td>1</td>
-								<td>Trưởng bộ phận</td>
-								<td>
-									<button class="edit-button">
-									 <i class="fa-solid fa-pen-to-square"></i>Sửa
-									</button>
-									<button class="delete-button">
-										<i class="fa-solid fa-trash"></i>Xóa
-									</button>
-								</td>
-							</tr>
-							<tr>
-								<td>
-									<p>1</p>
-								</td>
-								<td><p>Le Doan Duong</p></td>
-                                <td><p>01-10-2021</p></td>
-                                <td><p>name@example.com</p></td>
-                                <td>Nam</td>
-                                <!-- <td>745 Hồng Hà Hoàn Kiếm Hà Nội</td> -->
-                                <td>0926573474</td>
-                                <td>
-									<img src="img/1.jpg">
-								</td>
-								<td>1</td>
-								<td>Trưởng bộ phận</td>
-								<td>
-									<button class="edit-button">
-									 <i class="fa-solid fa-pen-to-square"></i>Sửa
-									</button>
-									<button class="delete-button">
-										<i class="fa-solid fa-trash"></i>Xóa
-									</button>
-								</td>
-							</tr>
-							<tr>
-								<td>
-									<p>1</p>
-								</td>
-								<td><p>Le Doan Duong</p></td>
-                                <td><p>01-10-2021</p></td>
-                                <td><p>name@example.com</p></td>
-                                <td>Nam</td>
-                                <!-- <td>745 Hồng Hà Hoàn Kiếm Hà Nội</td> -->
-                                <td>0926573474</td>
-                                <td>
-									<img src="img/1.jpg">
-								</td>
-								<td>1</td>
-								<td>Trưởng bộ phận</td>
-								<td>
-									<button class="edit-button">
-									 <i class="fa-solid fa-pen-to-square"></i>Sửa
-									</button>
-									<button class="delete-button">
-										<i class="fa-solid fa-trash"></i>Xóa
-									</button>
-								</td>
-							</tr>
-							<tr>
-								<td>
-									<p>1</p>
-								</td>
-								<td><p>Le Doan Duong</p></td>
-                                <td><p>01-10-2021</p></td>
-                                <td><p>name@example.com</p></td>
-                                <td>Nam</td>
-                                <!-- <td>745 Hồng Hà Hoàn Kiếm Hà Nội</td> -->
-                                <td>0926573474</td>
-                                <td>
-									<img src="img/1.jpg">
-								</td>
-								<td>1</td>
-								<td>Trưởng bộ phận</td>
-								<td>
-									<button class="edit-button">
-									 <i class="fa-solid fa-pen-to-square"></i>Sửa
-									</button>
-									<button class="delete-button">
-										<i class="fa-solid fa-trash"></i>Xóa
-									</button>
-								</td>
-							</tr>
-							<tr>
-								<td>
-									<p>1</p>
-								</td>
-								<td><p>Le Doan Duong</p></td>
-                                <td><p>01-10-2021</p></td>
-                                <td><p>name@example.com</p></td>
-                                <td>Nam</td>
-                                <!-- <td>745 Hồng Hà Hoàn Kiếm Hà Nội</td> -->
-                                <td>0926573474</td>
-                                <td>
-									<img src="img/1.jpg">
-								</td>
-								<td>1</td>
-								<td>Trưởng bộ phận</td>
-								<td>
-									<button class="edit-button">
-									 <i class="fa-solid fa-pen-to-square"></i>Sửa
-									</button>
-									<button class="delete-button">
-										<i class="fa-solid fa-trash"></i>Xóa
-									</button>
-								</td>
-							</tr>
-							<tr>
-								<td>
-									<p>1</p>
-								</td>
-								<td><p>Le Doan Duong</p></td>
-                                <td><p>01-10-2021</p></td>
-                                <td><p>name@example.com</p></td>
-                                <td>Nam</td>
-                                <!-- <td>745 Hồng Hà Hoàn Kiếm Hà Nội</td> -->
-                                <td>0926573474</td>
-                                <td>
-									<img src="img/1.jpg">
-								</td>
-								<td>1</td>
-								<td>Trưởng bộ phận</td>
-								<td>
-									<button class="edit-button">
-									 <i class="fa-solid fa-pen-to-square"></i>Sửa
-									</button>
-									<button class="delete-button">
-										<i class="fa-solid fa-trash"></i>Xóa
-									</button>
-								</td>
-							</tr>
-							<tr>
-								<td>
-									<p>1</p>
-								</td>
-								<td><p>Le Doan Duong</p></td>
-                                <td><p>01-10-2021</p></td>
-                                <td><p>name@example.com</p></td>
-                                <td>Nam</td>
-                                <!-- <td>745 Hồng Hà Hoàn Kiếm Hà Nội</td> -->
-                                <td>0926573474</td>
-                                <td>
-									<img src="img/1.jpg">
-								</td>
-								<td>1</td>
-								<td>Trưởng bộ phận</td>
-								<td>
-									<button class="edit-button">
-									 <i class="fa-solid fa-pen-to-square"></i>Sửa
-									</button>
-									<button class="delete-button">
-										<i class="fa-solid fa-trash"></i>Xóa
-									</button>
-								</td>
-							</tr>
-							<tr>
-								<td>
-									<p>1</p>
-								</td>
-								<td><p>Le Doan Duong</p></td>
-                                <td><p>01-10-2021</p></td>
-                                <td><p>name@example.com</p></td>
-                                <td>Nam</td>
-                                <!-- <td>745 Hồng Hà Hoàn Kiếm Hà Nội</td> -->
-                                <td>0926573474</td>
-                                <td>
-									<img src="img/1.jpg">
-								</td>
-								<td>1</td>
-								<td>Trưởng bộ phận</td>
-								<td>
-									<button class="edit-button">
-									 <i class="fa-solid fa-pen-to-square"></i>Sửa
-									</button>
-									<button class="delete-button">
-										<i class="fa-solid fa-trash"></i>Xóa
-									</button>
-								</td>
-							</tr>
-							
+			
 						</tbody>
 					</table>
 				</div>
