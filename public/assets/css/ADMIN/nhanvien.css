@@ -30,8 +30,6 @@
 }
 
 
-
-
 #content main .table-data {
 	display: flex;
 	flex-wrap: wrap;
@@ -76,10 +74,10 @@
 	border-bottom: 1px solid var(--grey);
 }
 #content main .table-data .order table td {
-	padding: 16px 0;
+	padding: 16px 16px;
 }
 #content main .table-data .order table tr td:first-child {
-	/* display: flex; */
+	
 	align-items: center;
 	grid-gap: 12px;
 	padding-left: 6px;
@@ -93,29 +91,13 @@
 #content main .table-data .order table tbody tr:hover {
 	background: var(--grey);
 }
-#content main .table-data .order table tr td .status {
-	font-size: 10px;
-	padding: 6px 16px;
-	color: #F9F9F9;
-	border-radius: 20px;
-	font-weight: 700;
-}
-#content main .table-data .order table tr td .status.completed {
-	background: var(--blue);
-}
-#content main .table-data .order table tr td .status.process {
-	background: var(--yellow);
-}
-#content main .table-data .order table tr td .status.pending {
-	background: var(--orange);
-}
+
 #tb td {
     text-align:center ;
 }
 th {
-    text-align:center ;
+    text-align:left ;
 }
-
 
 .edit-button, .delete-button, .detail-button {
 	border: none;
