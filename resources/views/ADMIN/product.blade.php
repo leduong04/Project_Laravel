@@ -1,4 +1,4 @@
-@extends('ADMIN.templates.tpl_default', ['pageId'=>'nhanvien'])
+@extends('ADMIN.templates.tpl_default', ['pageId'=>'product'])
 
 @section('css')
 <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
@@ -13,7 +13,6 @@
 <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/ADMIN/admin.css')}}">
 <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/ADMIN/sidebar.css')}}">
 <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/ADMIN/navbar.css')}}">
-<!-- <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/ADMIN/orders.css')}}"> -->
 <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/ADMIN/nhanvien.css')}}">
 
 
@@ -21,6 +20,7 @@
 @endsection
 
 @section('content')
+
 
 <main>
 			<div class="head-title">
@@ -40,8 +40,7 @@
 			<div class="table-data">
 				<div class="order">
 					<div class="head">
-						<h3>Nhân viên</h3>
-						<!-- <button class="add-button">Thêm</button> -->
+						<h3>Sản phẩm</h3>
 						<i class='bx bx-search' ></i>
 						<i class='bx bx-filter' ></i>
 					</div>
@@ -51,69 +50,63 @@
 					<table id="tb">
 						<thead>
 							<tr>
-								<th>id</th>
-								<th>Tên</th>
-								<th>Email</th>
-								<th>Giới tính</th>
-                                <th>SĐT</th>
-                                <th>Ảnh</th>
-                                <th>Level</th>
-                                <th>Chức vụ</th>
+								<th>ID</th>
+								<th>Tên sản phẩm</th>
+								<th>Ảnh</th>
+                                <th>Danh mục</th>
+								<th>Thương hiệu</th>
+                                <th>Giá</th>
+                                <th>Số lượng</th>
 								<th>Hành động</th>
 							</tr>
 						</thead>
 						<tbody>
 							<tr>
 								<td>
-									<p>1</p>
+									<p>123</p>
 								</td>
-								<td><p>Le Doan Duong</p></td>
-                                <td><p>name@example.com</p></td>
-                                <td>Nam</td>
-                                <td>0926573474</td>
-                                <td>
-									<img src="img/1.jpg">
-								</td>
-								<td>1</td>
-								<td>Trưởng bộ phận</td>
+								<td><p>Tủ lạnh</p></td>
+								<th><img src="img/1.jpg"></th>
+                                <td><p>1220</p></td>
+                                <td><p>3579</p></td>
+                                <td>9000000</td>
+								<td>99</td>
 								<td>
 									<button class="edit-button">
-									   <i class="fa-solid fa-pen-to-square"></i>
-									</button>
-									<button class="detail-button">
-									    <i class="fa-solid fa-info"></i>
-									</button>
-									<button class="delete-button">
-										<i class="fa-solid fa-trash"></i>
-									</button>
+										<i class="fa-solid fa-pen-to-square"></i>
+									 </button>
+									 <button class="detail-button">
+										 <i class="fa-solid fa-info"></i>
+									 </button>
+									 <button class="delete-button">
+										 <i class="fa-solid fa-trash"></i>
+									 </button>
 								</td>
 							</tr>
-							<tr>
+                            <tr>
 								<td>
-									<p>1235</p>
+									<p>123</p>
 								</td>
-								<td><p>Le Doan Duong</p></td>
-                                <td><p>name@example.com</p></td>
-                                <td>Nam</td>
-                                <td>0926573474</td>
-                                <td>
-									<img src="img/1.jpg">
-								</td>
-								<td>1</td>
-								<td>Trưởng bộ phận</td>
+								<td><p>Tủ lạnh</p></td>
+								<th><img src="img/1.jpg"></th>
+                                <td><p>1220</p></td>
+                                <td><p>3579</p></td>
+                                <td>9000000</td>
+								<td>99</td>
 								<td>
 									<button class="edit-button">
-									 <i class="fa-solid fa-pen-to-square"></i>
-									</button>
-									<button class="detail-button">
-									    <i class="fa-solid fa-info"></i>
-									</button>
-									<button class="delete-button">
-										<i class="fa-solid fa-trash"></i>
-									</button>
+										<i class="fa-solid fa-pen-to-square"></i>
+									 </button>
+									 <button class="detail-button">
+										 <i class="fa-solid fa-info"></i>
+									 </button>
+									 <button class="delete-button">
+										 <i class="fa-solid fa-trash"></i>
+									 </button>
 								</td>
 							</tr>
-			
+							
+							
 						</tbody>
 					</table>
 				</div>
@@ -121,7 +114,9 @@
 			</div>
 		</main>
 
-        @endsection
+
+
+@endsection
 
 @section('js')
 <script src="{{ asset('assets/js/ADMIN/navbar_sidebar.js')}}"></script>
