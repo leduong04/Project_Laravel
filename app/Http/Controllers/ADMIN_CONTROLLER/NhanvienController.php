@@ -7,7 +7,12 @@ use Illuminate\Http\Request;
 
 class NhanvienController extends Controller
 {
-    public function show(){
+    public function show()
+    {
         return view('./ADMIN/nhanvien');
+    }
+    public function show_add_nhanvien()
+    {
+        return view('./ADMIN/add_nhanvien');
     }
 }
