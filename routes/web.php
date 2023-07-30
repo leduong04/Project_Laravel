@@ -29,6 +29,6 @@ Route::get('/admin/nhanvien', [NhanvienController::class, 'show'])->name('nhanvi
 
 Route::get('/admin/product', [ProductController::class, 'show']);
 
-Route::get('/admin/add_nhanvien', [NhanvienController::class, 'show_add_nhanvien']);
+Route::get('/admin/add_nhanvien', [NhanvienController::class, 'show_add_nhanvien'])->name('nhanvien.add_nhanvien');
 
 Route::post('/admin/xuli_add_nhavien', [NhanvienController::class, 'xuli_add_nhanvien'])->name('nhanvien.xuli_add_nhanvien');

@@ -45,8 +45,8 @@
 						<i class='bx bx-search' ></i>
 						<i class='bx bx-filter' ></i>
 					</div>
-					<button class="add-button">
-						<i class="fa-solid fa-plus"></i> Thêm nhân viên mới
+					<button class="add-button" >
+						<i class="fa-solid fa-plus" ></i> <a href="{{route('nhanvien.add_nhanvien')}}">Thêm nhân viên mới</a>
 					</button>
 					<table id="tb">
 						<thead>
