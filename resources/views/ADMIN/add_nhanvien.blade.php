@@ -25,9 +25,10 @@
 
 <div id="container">
     <h1>Thêm nhân viên</h1>
-    <form>
+    <form action="{{route('nhanvien.xuli_add_nhanvien')}}"  method="post" enctype="multipart/form-data">
+        @csrf
         <label for="name">Tên nhân viên:</label>
-        <input type="text" id="name" name="name" required>
+        <input type="text" id="name" name="ten" required>
 
         <label for="email">Email:</label>
         <input type="email" id="email" name="email" required>
@@ -41,8 +42,8 @@
             <option value="Nữ">Nữ</option>
         </select>
 
-        <label for="date_of_birth">Ngày sinh:</label>
-        <input type="date" id="date_of_birth" name="date_of_birth" required>
+        <label for="date_of_birth">Ngày sinh (Năm-tháng-ngày):</label>
+        <input type="text" id="date_of_birth" name="date_of_birth" required>
 
         <label for="phone">Số điện thoại:</label>
         <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required>
@@ -54,17 +55,20 @@
         <input type="number" id="level" name="level" required>
 
         <label for="position">Chức vụ:</label>
-        <input type="text" id="position" name="position" required>
+        <input type="text" id="chuc_vu" name="chuc_vu" required>
 
 
         <label for="avatar">Hình ảnh:</label>
-        <input type="file" id="avatar" name="avatar" accept="image/*">
-        <img id="preview" src="#" alt="Hình ảnh">
+        <input type="file" id="img_link" name="img_link" accept="image/*">
+        <img id="preview" src="#" alt="Hình ảnh" style="max-width: 200px; display: none;">
 
 
 
 
-        <input type="submit" value="Thêm nhân viên">
+
+
+        <input type="submit" name="btn_create" value="Thêm nhân viên">
+
     </form>
 </div>
 

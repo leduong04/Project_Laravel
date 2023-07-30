@@ -1,19 +1,19 @@
-const avatarInput = document.getElementById('avatar');
-        const previewImg = document.getElementById('preview');
+const imgInput = document.getElementById('img_link');
+const imgPreview = document.getElementById('preview');
 
-        avatarInput.addEventListener('change', function() {
-            const file = this.files[0];
-            const reader = new FileReader();
+imgInput.addEventListener('change', function(event) {
+    const file = event.target.files[0];
+    const reader = new FileReader();
 
-            reader.onload = function() {
-                previewImg.src = reader.result;
-                previewImg.style.display = 'block';
-            }
+    reader.onload = function() {
+        imgPreview.src = reader.result;
+        imgPreview.style.display = 'block';
+    }
 
-            if (file) {
-                reader.readAsDataURL(file);
-            } else {
-                previewImg.src = '';
-                previewImg.style.display = 'none';
-            }
-        });
+    if (file) {
+        reader.readAsDataURL(file);
+    } else {
+        imgPreview.src = '#';
+        imgPreview.style.display = 'none';
+    }
+});
