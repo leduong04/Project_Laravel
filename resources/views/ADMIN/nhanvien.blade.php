@@ -46,7 +46,7 @@
 						<i class='bx bx-filter' ></i>
 					</div>
 					<button class="add-button" >
-						<i class="fa-solid fa-plus" ></i> <a href="{{route('nhanvien.add_nhanvien')}}">Thêm nhân viên mới</a>
+						<i class="fa-solid fa-plus" ></i><a href="{{route('nhanvien.add_nhanvien')}}">Thêm nhân viên mới</a>
 					</button>
 					<table id="tb">
 						<thead>
@@ -62,20 +62,24 @@
 								<th>Hành động</th>
 							</tr>
 						</thead>
+						
 						<tbody>
+						@foreach ($nhanviens as $nhanvien)
 							<tr>
 								<td>
-									<p>1</p>
+									<p>{{ $nhanvien->id }}</p>
 								</td>
-								<td><p>Le Doan Duong</p></td>
-                                <td><p>name@example.com</p></td>
-                                <td>Nam</td>
-                                <td>0926573474</td>
+								<td><p>{{ $nhanvien->full_name }}</p></td>
+                                <td><p>{{ $nhanvien->email }}</p></td>
+                                <td>{{ $nhanvien->gender }}</td>
+                                <td>{{ $nhanvien->phone }}</td>
+								
                                 <td>
-									<img src="img/1.jpg">
+									<img src="/storage/image/nhanvien/{{ $nhanvien->img_link }}">
+
 								</td>
-								<td>1</td>
-								<td>Trưởng bộ phận</td>
+								<td>{{ $nhanvien->level }}</td>
+								<td>{{ $nhanvien->chuc_vu }}</td>
 								<td>
 									<button class="edit-button">
 									   <i class="fa-solid fa-pen-to-square"></i>
@@ -88,31 +92,8 @@
 									</button>
 								</td>
 							</tr>
-							<tr>
-								<td>
-									<p>1235</p>
-								</td>
-								<td><p>Le Doan Duong</p></td>
-                                <td><p>name@example.com</p></td>
-                                <td>Nam</td>
-                                <td>0926573474</td>
-                                <td>
-									<img src="img/1.jpg">
-								</td>
-								<td>1</td>
-								<td>Trưởng bộ phận</td>
-								<td>
-									<button class="edit-button">
-									 <i class="fa-solid fa-pen-to-square"></i>
-									</button>
-									<button class="detail-button">
-									    <i class="fa-solid fa-info"></i>
-									</button>
-									<button class="delete-button">
-										<i class="fa-solid fa-trash"></i>
-									</button>
-								</td>
-							</tr>
+							@endforeach
+							
 			
 						</tbody>
 					</table>

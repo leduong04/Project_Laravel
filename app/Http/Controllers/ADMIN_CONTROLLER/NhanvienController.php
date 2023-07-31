@@ -10,15 +10,19 @@ use Carbon\Carbon;
 
 class NhanvienController extends Controller
 {
-    public function show()
-    {
-        return view('./ADMIN/nhanvien');
-    }
+    
     public function show_add_nhanvien()
     {
         return view('./ADMIN/add_nhanvien');
     }
-  
+
+
+    public function show()
+    {
+        $nhanviens = admin_nhanvien::all(); // Lấy danh sách nhân viên từ CSDL
+        return view('./ADMIN/nhanvien', compact('nhanviens')); // Trả về view và truyền danh sách nhân viên vào view
+    }
+
 
 
     public function xuli_add_nhanvien(Request $request)
