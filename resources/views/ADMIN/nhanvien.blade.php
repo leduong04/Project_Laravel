@@ -97,7 +97,7 @@
 							<button class="detail-button">
 								<i class="fa-solid fa-info"></i>
 							</button>
-							<button class="delete-button">
+							<button class="delete-button" onclick="deleteNhanvien({{ $nhanvien->id }})">
 								<i class="fa-solid fa-trash"></i>
 							</button>
 						</td>
@@ -122,6 +122,39 @@
 		url = url.replace(':id', id);
 		window.location.href = url;
 	}
+</script>
+
+
+<script>
+	// Function to delete nhavien by id
+	function deleteNhanvien(id) {
+		var confirmation = confirm("Bạn có chắc là muốn xóa nhân viên có id là: " + id + "?");
+		if (confirmation) {
+			// Send a DELETE request to the server
+			var url = "{{ route('nhanvien.delete', ':id') }}";
+			url = url.replace(':id', id);
+
+			$.ajax({
+				url: url,
+				type: 'DELETE',
+				data: {
+					"_token": "{{ csrf_token() }}"
+				},
+				success: function(response) {
+					// Handle success (optional)
+					console.log(response);
+					// Reload the page to update the list
+					window.location.reload();
+				},
+				error: function(error) {
+					// Handle error (optional)
+					console.log(error);
+				}
+			});
+		}
+	}
+
+	
 </script>
 
 

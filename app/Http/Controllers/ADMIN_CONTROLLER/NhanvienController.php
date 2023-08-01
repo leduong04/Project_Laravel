@@ -124,4 +124,23 @@ class NhanvienController extends Controller
         session()->flash('success', 'Thông tin nhân viên đã được cập nhật thành công');
         return redirect()->route('nhanvien.nhanvien_list');
     }
+
+
+
+
+
+
+
+
+    public function delete($id)
+    {
+        $nhanvien = admin_nhanvien::findOrFail($id);
+        // Delete the image from storage
+        Storage::delete('public/image/nhanvien/' . $nhanvien->img_link);
+        // Delete the record from the database
+        $nhanvien->delete();
+
+        // You can add any response message you want
+        return response()->json(['message' => 'Nhân viên đã được xóa thành công']);
+    }
 }
