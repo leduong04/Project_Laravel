@@ -32,3 +32,12 @@ Route::get('/admin/product', [ProductController::class, 'show']);
 Route::get('/admin/add_nhanvien', [NhanvienController::class, 'show_add_nhanvien'])->name('nhanvien.add_nhanvien');
 
 Route::post('/admin/xuli_add_nhavien', [NhanvienController::class, 'xuli_add_nhanvien'])->name('nhanvien.xuli_add_nhanvien');
+
+// Sửa thông tin nhân viên
+Route::post('/admin/nhanvien/update/{id}',  [NhanvienController::class, 'update'])->name('nhanvien.update');
+
+
+
+
+// Hiển thị form sửa thông tin nhân viên
+Route::get('/admin/nhanvien/show_update/{id}', [NhanvienController::class, 'show_update'])->name('nhanvien.show_update');
