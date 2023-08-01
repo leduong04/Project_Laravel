@@ -41,3 +41,8 @@ Route::post('/admin/nhanvien/update/{id}',  [NhanvienController::class, 'update'
 
 // Hiển thị form sửa thông tin nhân viên
 Route::get('/admin/nhanvien/show_update/{id}', [NhanvienController::class, 'show_update'])->name('nhanvien.show_update');
+
+
+
+
+Route::delete('/admin/nhanvien/delete/{id}', [NhanvienController::class, 'delete'])->name('nhanvien.delete');
