@@ -4,6 +4,7 @@ use App\Http\Controllers\ADMIN_CONTROLLER\OrdersController;
 use App\Http\Controllers\ADMIN_CONTROLLER\NhanvienController;
 use App\Http\Controllers\ADMIN_CONTROLLER\ProductController;
 use App\Http\Controllers\ADMIN_CONTROLLER\Image_nhanvien_Controller;
+use App\Http\Controllers\ADMIN_CONTROLLER\Detail_NhanvienController;
 
 
 use Illuminate\Support\Facades\Route;
@@ -28,6 +29,10 @@ Route::get('/admin/orders', [OrdersController::class, 'show']);
 Route::get('/admin/nhanvien', [NhanvienController::class, 'show'])->name('nhanvien.nhanvien_list');
 
 Route::get('/admin/product', [ProductController::class, 'show']);
+
+// chi tiet nhanvien admin
+Route::get('/admin/detail_nhanvien', [Detail_NhanvienController::class, 'show']);
+
 
 Route::get('/admin/add_nhanvien', [NhanvienController::class, 'show_add_nhanvien'])->name('nhanvien.add_nhanvien');
 
