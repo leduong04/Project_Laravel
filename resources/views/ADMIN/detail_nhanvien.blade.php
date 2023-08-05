@@ -42,44 +42,48 @@
 					</div> -->
 
 					<div class="nhanvien-img">
-						<img src="img/1.jpg">
+						<img src="{{ asset('storage/image/nhanvien/' . $nhanvien->img_link) }}">
 					</div>
 					<div class="inform">
 						<div class="ID">
 							<p>ID: </p>
-							<p>#1111</p>
+							<p>{{ $nhanvien->id }}</p>
 						</div>
 						<div class="name">
 							<p>Tên: </p>
-							<p>Nguyễn Trường An</p>
+							<p>{{ $nhanvien->full_name }}</p>
 						</div>
 						<div class="email">
 							<p>Email: </p>
-							<p>example@gmail.com</p>
+							<p>{{ $nhanvien->email }}</p>
 						</div>
 						<div class="pass">
 							<p>Password: </p>
-							<p>******</p>
+							<p>{{ $nhanvien->password }}</p>
 						</div>
 						<div class="birth">
 							<p>Date of birth: </p>
-							<p>22/22/2122</p>
+							<p>{{ $nhanvien->date_of_birth }}</p>
 						</div>
 						<div class="gender">
 							<p>Giới Tính: </p>
-							<p>Nam</p>
+							<p>{{$nhanvien->gender}}</p>
 						</div>
 						<div class="address">
 							<p>Địa chỉ: </p>
-							<p>175 Tay son</p>
+							<p>{{$nhanvien->address}}</p>
 						</div>
 						<div class="phone">
 							<p>Số điện thoại: </p>
-							<p>0999999999</p>
+							<p>{{ $nhanvien->phone }}</p>
 						</div>
 						<div class="level">
 							<p>level: </p>
-							<p>99</p>
+							<p>{{ $nhanvien->level }}</p>
+						</div>
+						<div class="chuc_vu">
+							<p>Chức vụ: </p>
+							<p>{{ $nhanvien->chuc_vu }}</p>
 						</div>
 					
 				</div>

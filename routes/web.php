@@ -31,7 +31,7 @@ Route::get('/admin/nhanvien', [NhanvienController::class, 'show'])->name('nhanvi
 Route::get('/admin/product', [ProductController::class, 'show']);
 
 // chi tiet nhanvien admin
-Route::get('/admin/detail_nhanvien', [Detail_NhanvienController::class, 'show']);
+Route::get('/admin/detail_nhanvien/{id}', [NhanvienController::class, 'show_detail'])->name('nhanvien.detail');
 
 
 Route::get('/admin/add_nhanvien', [NhanvienController::class, 'show_add_nhanvien'])->name('nhanvien.add_nhanvien');
