@@ -22,8 +22,8 @@ class NhanvienController extends Controller
 
     public function show()
     {
-        $nhanviens = admin_nhanvien::all(); // Lấy danh sách nhân viên từ CSDL
-        return view('./ADMIN/nhanvien', compact('nhanviens')); // Trả về view và truyền danh sách nhân viên vào view
+        $nhanviens = admin_nhanvien::all(); 
+        return view('./ADMIN/nhanvien', compact('nhanviens')); 
     }
 
 
@@ -135,12 +135,24 @@ class NhanvienController extends Controller
     public function delete($id)
     {
         $nhanvien = admin_nhanvien::findOrFail($id);
-        // Delete the image from storage
+        
         Storage::delete('public/image/nhanvien/' . $nhanvien->img_link);
-        // Delete the record from the database
+        
         $nhanvien->delete();
 
-        // You can add any response message you want
+        
         return response()->json(['message' => 'Nhân viên đã được xóa thành công']);
+    }
+
+
+
+
+    public function show_detail($id)
+    {
+        
+
+        $nhanvien = admin_nhanvien::findOrFail($id);
+        $pageTitle = 'Thông tin nhân viên';
+        return view('./ADMIN/detail_nhanvien', compact('nhanvien', 'pageTitle'));
     }
 }

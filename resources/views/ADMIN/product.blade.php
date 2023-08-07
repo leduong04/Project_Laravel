@@ -21,99 +21,78 @@
 
 @section('content')
 
-
 <main>
-			<div class="head-title">
-				<div class="left">
-					<ul class="breadcrumb">
-						<li>
-							<a href="#">Dashboard</a>
-						</li>
-						<li><i class='bx bx-chevron-right' ></i></li>
-						<li>
-                            <p id="myText"></p>
-						</li>
-					</ul>
-				</div>
-			</div>
+	<div class="head-title">
+		<div class="left">
+			<ul class="breadcrumb">
+				<li>
+					<a href="#">Dashboard</a>
+				</li>
+				<li><i class='bx bx-chevron-right'></i></li>
+				<li>
+					<p id="myText">Sản phẩm</p>
+				</li>
+			</ul>
+		</div>
+	</div>
 
-			<div class="table-data">
-				<div class="order">
-					<div class="head">
-						<h3>Sản phẩm</h3>
-						<i class='bx bx-search' ></i>
-						<i class='bx bx-filter' ></i>
-					</div>
-					<button class="add-button">
-						<i class="fa-solid fa-plus"></i> Thêm nhân viên mới
-					</button>
-					<table id="tb">
-						<thead>
-							<tr>
-								<th>ID</th>
-								<th>Tên sản phẩm</th>
-								<th>Ảnh</th>
-                                <th>Danh mục</th>
-								<th>Thương hiệu</th>
-                                <th>Giá</th>
-                                <th>Số lượng</th>
-								<th>Hành động</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<td>
-									<p>123</p>
-								</td>
-								<td><p>Tủ lạnh</p></td>
-								<th><img src="img/1.jpg"></th>
-                                <td><p>1220</p></td>
-                                <td><p>3579</p></td>
-                                <td>9000000</td>
-								<td>99</td>
-								<td>
-									<button class="edit-button">
-										<i class="fa-solid fa-pen-to-square"></i>
-									 </button>
-									 <button class="detail-button">
-										 <i class="fa-solid fa-info"></i>
-									 </button>
-									 <button class="delete-button">
-										 <i class="fa-solid fa-trash"></i>
-									 </button>
-								</td>
-							</tr>
-                            <tr>
-								<td>
-									<p>123</p>
-								</td>
-								<td><p>Tủ lạnh</p></td>
-								<th><img src="img/1.jpg"></th>
-                                <td><p>1220</p></td>
-                                <td><p>3579</p></td>
-                                <td>9000000</td>
-								<td>99</td>
-								<td>
-									<button class="edit-button">
-										<i class="fa-solid fa-pen-to-square"></i>
-									 </button>
-									 <button class="detail-button">
-										 <i class="fa-solid fa-info"></i>
-									 </button>
-									 <button class="delete-button">
-										 <i class="fa-solid fa-trash"></i>
-									 </button>
-								</td>
-							</tr>
-							
-							
-						</tbody>
-					</table>
-				</div>
-				
+	<div class="table-data">
+		<div class="order">
+			<div class="head">
+				<h3>Sản phẩm</h3>
+				<i class='bx bx-search'></i>
+				<i class='bx bx-filter'></i>
 			</div>
-		</main>
+			<button class="add-button">
+				<i class="fa-solid fa-plus"></i> Thêm sản phẩm mới
+			</button>
+			<table id="tb">
+				<thead>
+					<tr>
+						<th>ID</th>
+						<th>Tên sản phẩm</th>
+						<th>Ảnh</th>
+						<th>Danh mục</th>
+						<th>Thương hiệu</th>
+						<th>Giá</th>
+						<th>Số lượng</th>
+						<th>Hành động</th>
+					</tr>
+				</thead>
+				<tbody>
+					@foreach($products as $product)
+					<tr>
+						<td>{{ $product->id }}</td>
+						<td>{{ $product->product_name }}</td>
+						<td>
+							@if ($product->image->count() > 0)
+							<img src="{{ $product->image->first()->img_link }}" alt="">
+							@endif
+						</td>
 
+						<td>{{ $product->category_id }}</td>
+						<td>{{ $product->brand_id }}</td>
+						<td>{{ $product->price }}</td>
+						<td>{{ $product->quantity }}</td>
+						<td>
+							<button class="edit-button">
+								<i class="fa-solid fa-pen-to-square"></i>
+							</button>
+							<button class="detail-button">
+								<i class="fa-solid fa-info"></i>
+							</button>
+							<button class="delete-button">
+								<i class="fa-solid fa-trash"></i>
+							</button>
+						</td>
+					</tr>
+					@endforeach
+				</tbody>
+			</table>
+		</div>
+
+	</div>
+</main>
 
 
 @endsection
